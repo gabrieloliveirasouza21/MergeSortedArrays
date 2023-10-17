@@ -1,4 +1,6 @@
-﻿internal class Program {
+﻿using System.Xml.Serialization;
+
+internal class Program {
     private static void Main(string[] args) {
         void MergeSortedArrays(int[] firstArr, int[] SndArr) {
 
@@ -15,11 +17,25 @@
                 arrIntem[i] = SndArr[i - contador];
             }
 
-            foreach (int i in arrIntem) {
-                Console.WriteLine(i);
+            //foreach (int i in arrIntem) {
+            //    Console.WriteLine(i);
+            //}
+
+            // implementar o Bubble Sort para ordenação
+
+            for (int i = 0; i < arrIntem.Length - 1; i++) {
+                for (int j = 0; j < arrIntem.Length - i - 1; j++) {
+                    if (arrIntem[j] > arrIntem[j+1]) {
+                        int aux = arrIntem[j];
+                        arrIntem[j] = arrIntem[j+1];
+                        arrIntem[j+1] = aux;
+                    }
+                }
             }
 
-            
+            foreach(var i in arrIntem) {
+                Console.Write(i + " ");
+            }
 
         }
         int[] arr1 = { 1, 2, 3 };
