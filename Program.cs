@@ -38,8 +38,8 @@ internal class Program {
             }
 
         }
-        int[] arr1 = { 1, 2, 3 };
-        int[] arr2 = { 4, 5, 3 };
+        int[] arr1 = { 364,213,12412,4 };
+        int[] arr2 = {1,2,10000,2,4,5,2,7,6,1,2,9,10};
         MergeSortedArrays(arr1,arr2);    
     }
 }
