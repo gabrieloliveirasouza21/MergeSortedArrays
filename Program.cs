@@ -12,7 +12,7 @@
             }
 
             for (int i = contador; i < TotalSize; i++) {
-                arrIntem[i] = SndArr[SndArr.Length - i];
+                arrIntem[i] = SndArr[i - contador];
             }
 
             foreach (int i in arrIntem) {
